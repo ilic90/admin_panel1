@@ -27,7 +27,15 @@
         @endif
     
     </p>
-
+    
+    <p><strong>Published posts:</strong>
+        <ul>
+            @foreach($user->posts as $post)
+                <li><a href="{{route('home.post',$post->slug)}}">{{ $post->title }}</a></li>
+            @endforeach
+        </ul>
+    </p>
+    
     <p><small><strong>Member since {{ $user->created_at->toFormattedDateString() }}</strong></small></p>
 
     <hr>
