@@ -189,15 +189,13 @@ class AdminUsersController extends Controller
 
     }
 
-    public function profile($id){
+    public function search(Request $request){
 
-        
+        $search = $request->search;
 
-    }
+        $users = User::where('name','like','%'.$search.'%')->get();
 
-    public function editProfile($id){
-
-        
+        return view('admin.users.results',compact('users'));
 
     }
 

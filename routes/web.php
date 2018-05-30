@@ -64,6 +64,8 @@ Route::group(['middleware' => 'admin'],function(){
 
     Route::delete('admin/delete/media', 'AdminMediasController@deleteMedia');
 
+    Route::get('/admin/search','AdminUsersController@search');
+
 });
 
 Route::group(['middleware' => 'auth'],function(){

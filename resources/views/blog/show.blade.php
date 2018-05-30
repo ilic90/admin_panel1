@@ -93,6 +93,8 @@
 
                     @endif
 
+                    @if(Auth::check())
+
                     <div class="comment-reply-container">
 
                         <button class="toggle-reply btn btn-primary pull-right">Reply</button>
@@ -117,6 +119,8 @@
                         </div>
 
                     </div>
+
+                    @endif
 
                 </div>
 
